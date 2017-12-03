@@ -1,6 +1,6 @@
 name=woo
 
-LLVM_BIN = ~/summer_epfl/llvm-3.8/bin
+LLVM_BIN = #
 
 all: $(name)
 
@@ -14,7 +14,7 @@ $(name).o: $(name).c
 	$(LLVM_BIN)/clang -c -o $(name).o $(name).c
 
 $(name): $(name).c
-	$(LLVM_BIN)/clang -v -o $(name) $(name).c
+	$(LLVM_BIN)/clang -o $(name) $(name).c
 	# uncomment to see linker invocation and all the commands the $(LLVM_BIN)/clang frontend
 	# internally calls
 	#$(LLVM_BIN)/clang -v -o $(name) $(name).c
